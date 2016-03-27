@@ -109,7 +109,7 @@ nav {
     height: 100%;
     width: 4px;
     background: #d7e4ed;
-    margin-left: -22px; }
+    margin-left: -21px; }
     @media screen and (min-width: 500px) {
       #experience .container::before {
         display: block;
@@ -136,7 +136,7 @@ nav {
     width: 10px;
     height: 10px;
     top: 18px;
-    left: -25px; }
+    left: -24px; }
     @media screen and (min-width: 500px) {
       .timeline--img {
         width: 40px;
