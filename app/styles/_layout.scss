@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: $sectionPadding;
+}
+
+.textbox {
+  min-height: 50vh;
+  position: relative;
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+section {
+
+  &.blue {
+    background: radial-gradient(ellipse farthest-corner at center top, $light 0%, $dark 100%);
+    color: $lightGray;
+
+    h1 {
+      color: #fff;
+    }
+  }
+
+  &.gray {
+    background-color: $lightGray;
+  }
+
+  h1 {
+    font-family: 'Bitter';
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+}

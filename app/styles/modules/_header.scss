@@ -1,0 +1,32 @@
+
+header {
+  background-color: #fff;
+  min-height: 50vh;
+  position: relative;
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  strong {
+    color: $dark;
+  }
+
+  p {
+    margin: 0 0 1rem;
+  }
+
+  p:first-child {
+    font-size: 1.4rem;
+  }
+
+  p.contact {
+    color: $dark;
+    font-weight: 600;
+    font-size: .9rem;
+  }
+
+}
