@@ -29,17 +29,29 @@ nav {
     color: #888;
     padding: 0 0 2px;
     transition: color .3s;
+
+    visibility: hidden;
+    @media screen and (min-width: 500px) {
+      visibility: visible;
+    }
+
   }
 
   &--item:first-child {
     font-family: 'Bitter';
-    font-size: 1.2rem;
     position: absolute;
     left: 0;
     color: $dark;
     font-weight: 580;
     margin: 0;
     text-transform: uppercase;
+
+    font-size: 1rem;
+
+    @media screen and (min-width: 500px) {
+      font-size: 1.2rem;
+    }
+
   }
 
   &--item:first-child span {

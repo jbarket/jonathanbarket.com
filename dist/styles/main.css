@@ -62,16 +62,23 @@ nav {
     text-decoration: none;
     color: #888;
     padding: 0 0 2px;
-    transition: color .3s; }
+    transition: color .3s;
+    visibility: hidden; }
+    @media screen and (min-width: 500px) {
+      .nav--item a {
+        visibility: visible; } }
   .nav--item:first-child {
     font-family: 'Bitter';
-    font-size: 1.2rem;
     position: absolute;
     left: 0;
     color: #2980B9;
     font-weight: 580;
     margin: 0;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 1rem; }
+    @media screen and (min-width: 500px) {
+      .nav--item:first-child {
+        font-size: 1.2rem; } }
   .nav--item:first-child span {
     transition: opacity 1s;
     opacity: 0; }
