@@ -8,9 +8,9 @@
 @import "modules";
 
 .txt-rotate:after {
-  content: "";
   border-right: 2px solid #888;
-  margin: 0 3px;
+  content: " ";
+  margin: 0 6px 0 0;
   animation: blink-caret .7s linear 0s infinite;
 }
 
