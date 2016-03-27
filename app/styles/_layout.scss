@@ -6,15 +6,7 @@
 }
 
 .textbox {
-  min-height: 20rem;
   position: relative;
-
-  .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 }
 
 section {
@@ -22,6 +14,7 @@ section {
   &.blue {
     background: radial-gradient(ellipse farthest-corner at center top, $light 0%, $dark 100%);
     color: $lightGray;
+    padding: 2rem 0;
 
     h1 {
       color: #fff;
