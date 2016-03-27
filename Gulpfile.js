@@ -9,7 +9,7 @@ var source = require('vinyl-source-stream');
 
 var browserSync = require('browser-sync');
 var historyApiFallback = require('connect-history-api-fallback');
- 
+
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
     .pipe(plugins.ghPages());
@@ -40,7 +40,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('index', function () {
-	return gulp.src('./app/index.html')
+	return gulp.src(['./app/index.html', './app/CNAME'])
 		.pipe(gulp.dest('./dist'))
     .pipe(browserSync.reload({
       stream: true
