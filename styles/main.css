@@ -108,6 +108,18 @@ nav {
     visibility: visible;
     transform: scaleX(1); }
 
+.tags {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .tags li {
+    background-color: #2980B9;
+    color: white;
+    padding: 0 .4rem;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: .7rem; }
+
 #experience {
   position: relative; }
   #experience::after {
