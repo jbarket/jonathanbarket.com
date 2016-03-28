@@ -9,10 +9,15 @@ footer {
   }
 
   .contact {
-    float: left;
-    width: 48%;
-    padding: 0 2rem 0 0;
+    display: none;
     font-size: .8rem;
+
+    @media screen and (min-width: 500px) {
+      display: block;
+      float: left;
+      width: 48%;
+      padding: 0 2rem 0 0;
+    }
 
     h1 {
       font-size: 1rem;
@@ -26,9 +31,13 @@ footer {
 
   .container > a {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 49%;
     transform: translate(-50%, -50%);
+
+    @media screen and (min-width: 500px) {
+      top: 50%;
+      left: 50%;
+    }
   }
 
   ul {

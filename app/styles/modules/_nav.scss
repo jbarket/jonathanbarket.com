@@ -38,31 +38,64 @@ nav {
   }
 
   &--item:first-child {
-    font-family: 'Bitter';
     position: absolute;
     left: 0;
-    color: $dark;
-    font-weight: 580;
     margin: 0;
-    text-transform: uppercase;
 
     font-size: 1rem;
+
+    a {
+      color: $dark;
+      text-decoration:none;
+      visibility: visible;
+    }
+
+    .nav--name {
+      text-transform: uppercase;
+      font-family: 'Bitter';
+      font-weight: 580;
+    }
+
+    .nav--reveal {
+      display: none;
+    }
+
 
     @media screen and (min-width: 500px) {
       font-size: 1.2rem;
     }
 
-  }
+    @media only screen and (min-width: 1170px) {
 
-  &--item:first-child span {
-    transition: opacity 1s;
-    opacity: 0;
-  }
+      text-align: left;
+      height: 1.8rem;
+      overflow: hidden;
 
-  &--item:first-child:hover span {
-    opacity: 1;
-  }
+      a {
+        color: $dark;
+        text-decoration:none;
+        display:block; /* important */
+      }
 
+      &, .nav--reveal {
+        transition: 0.3s;
+      }
+
+
+      a:hover{
+        text-decoration: none;
+      }
+
+      .nav--reveal {
+        margin-top: -1.5em;
+        display: block;
+      }
+
+      &:hover .nav--reveal {
+        margin-top: 0em;
+      }
+    }
+  }
 
   &--item:not(:first-child) a:hover {
     color: #333;

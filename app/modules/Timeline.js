@@ -3,7 +3,6 @@ import Rainbow from 'rainbowvis.js';
 class Timeline {
   constructor() {
     this.events = document.querySelectorAll(".timeline");
-    this.circles = document.querySelectorAll(".timeline--img");
     this.triggerOffset = 0.9;
 
     this.eventListeners();
@@ -58,11 +57,18 @@ class Timeline {
 
   rainbow() {
     let rainbow = new Rainbow();
-    rainbow.setNumberRange(0, this.circles.length - 1);
+    rainbow.setNumberRange(0, this.events.length - 1);
     rainbow.setSpectrum("#3498DB", "#BDC3C7");
 
-    for (var i = 0; i < this.circles.length; i++) {
-      this.circles[i].style.backgroundColor = "#" + rainbow.colourAt(i);
+    for (var i = 0; i < this.events.length; i++) {
+      this.events[i].querySelector(".timeline--img").style.backgroundColor = "#" + rainbow.colourAt(i);
+
+      let tags = this.events[i].querySelectorAll(".tags li");
+
+      Array.from(tags).forEach((tag) => {
+        tag.style.backgroundColor = "#" + rainbow.colourAt(i);
+      });
+
     }
   }
 }
