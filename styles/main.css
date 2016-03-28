@@ -67,30 +67,38 @@ nav {
     left: 0;
     margin: 0;
     font-size: 1rem; }
-    @media screen and (min-width: 500px) {
-      .nav--item:first-child {
-        font-size: 1.2rem; } }
-  .nav--item:first-child {
-    text-align: left;
-    height: 1.8rem;
-    overflow: hidden; }
+    .nav--item:first-child a {
+      color: #2980B9;
+      text-decoration: none;
+      visibility: visible; }
     .nav--item:first-child .nav--name {
       text-transform: uppercase;
       font-family: 'Bitter';
       font-weight: 580; }
-    .nav--item:first-child a {
-      color: #2980B9;
-      text-decoration: none;
-      display: block;
-      /* important */ }
-    .nav--item:first-child, .nav--item:first-child .nav--reveal {
-      transition: 0.3s; }
-    .nav--item:first-child a:hover {
-      text-decoration: none; }
     .nav--item:first-child .nav--reveal {
-      margin-top: -1.5em; }
-    .nav--item:first-child:hover .nav--reveal {
-      margin-top: 0em; }
+      display: none; }
+    @media screen and (min-width: 500px) {
+      .nav--item:first-child {
+        font-size: 1.2rem; } }
+    @media only screen and (min-width: 1170px) {
+      .nav--item:first-child {
+        text-align: left;
+        height: 1.8rem;
+        overflow: hidden; }
+        .nav--item:first-child a {
+          color: #2980B9;
+          text-decoration: none;
+          display: block;
+          /* important */ }
+        .nav--item:first-child, .nav--item:first-child .nav--reveal {
+          transition: 0.3s; }
+        .nav--item:first-child a:hover {
+          text-decoration: none; }
+        .nav--item:first-child .nav--reveal {
+          margin-top: -1.5em;
+          display: block; }
+        .nav--item:first-child:hover .nav--reveal {
+          margin-top: 0em; } }
   .nav--item:not(:first-child) a:hover {
     color: #333; }
   .nav--item:not(:first-child) a:before {
